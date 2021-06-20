@@ -33,7 +33,7 @@
                             aria-controls="profile" aria-selected="false">Hirer</a>
                     </li>
                 </ul>
-                <form action="{{route('show')}}" method="post" role="form">
+                <form action="" method="post" role="form">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <h3 class="register-heading">Đăng Kí Thành viên</h3>

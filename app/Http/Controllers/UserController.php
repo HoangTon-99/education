@@ -19,9 +19,9 @@ class UserController extends Controller
                 'phone' =>'required|size:10|numeric',
                 'password' =>'required|confirmed|min:5|max:30',
             ]);
-            if($validator->fails()){
+            if($validate->fails()){
                 return redirect()->back()
-                ->withErrors($validator);
+                ->withErrors($validate);
                 ->withInput();
             }
         }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\JsonController;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\loginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +17,15 @@ use App\Http\Controllers\Controller;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+   return view('hoangton.index');
+});
 
-Route::get('/signup', function () {
+Route::get('signup', function () {
    return view('hoangton.signup');
 });
- Route::get('/show',[UserController::class, 'show']);
- Route::post('/store',[UserController::class, 'store']);
+//  Route::get('/show',[UserController::class, 'show']);
+//  Route::post('/store',[UserController::class, 'store']);
 
 //  Route::get('/login', 'UserController@show');
 //  Route::post('/login', 'UserController@store');
@@ -34,7 +34,14 @@ Route::get('/signup', function () {
 // Route::get('goi', [MyController::class, 'xinchao']);
 
 
-Route::post('upload', function (Request $request) {
+// Route::post('upload', function (Request $request) {
     // logic xử lý upload file.
+// });
+// Route::get('json',[jsonController::class, 'json']);
+
+Route::get('login',function(){
+    return view('hoangton.login');
 });
-Route::get('json',[jsonController::class, 'json']);
+Route::get('login', [loginController::class, 'login']);
+Route::post('login', [loginController::class, 'postlogin']);
+
