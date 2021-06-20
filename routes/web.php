@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use app\http\controllers\FileUploadController;
+use App\Http\Controllers\UploadController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +19,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('hello', function () {
+    $users = DB::table('users')->get();
+    return view('hello', ['users' => $users]);
+});
+
+Route::get('upload',function(){
+    return view('upload');
+});
+Route::post('upload',[UploadController::class,'index']);
+
+/*đăng kí khóa học*/
+Route::get('dangky',function(){
+    return view('Registration');
 });
