@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\JsonController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,9 @@ Route::get('/', function () {
 // Route::get('register', function () {
 //    return view('hoangton.register');
 // });
- Route::get('register',[loginController::class, 'register']);
- Route::post('register',[loginController::class, 'postregister']);
- Route::get('logout',[loginController::class, 'logout']);
+//  Route::get('register',[loginController::class, 'register']);
+//  Route::post('register',[loginController::class, 'postregister']);
+//  Route::get('logout',[loginController::class, 'logout']);
 
 //  Route::get('/login', function () {
 //    return view('hoangton.login');
@@ -48,6 +49,12 @@ Route::get('/', function () {
 // Route::get('/login',function(){
 //     return view('hoangton.login');
 // });
-Route::get('login', [loginController::class, 'login']);
-Route::post('login', [loginController::class, 'postlogin']);
+// Route::get('login', [loginController::class, 'login']);
+// Route::post('login', [loginController::class, 'postlogin']);
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
