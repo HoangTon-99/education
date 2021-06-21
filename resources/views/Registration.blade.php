@@ -10,8 +10,8 @@
 </head>
 <body>
 <header>
-	<div class="w-50"><img src="{{URL::asset('/img/cdbk.jpg')}}" class="w-25 h-25 float-start"></div>
-	<h2 class="text-center w-100 h-25 ">CHÀO MỪNG ĐẾN VỚI KHÓA ĐÀO TẠO <br>TRƯỜNG CAO ĐẲNG BÁCH KHOA</h2> 
+	<div class="w-50"><img src="{{URL::asset('/img/brand.png')}}" class="w-75 h-75 float-start"></div>
+	<div class="col-12 col-sm-6  float-start mt text-secondary"><h2 class="text-center w-100 h-25 ">CHÀO MỪNG ĐẾN VỚI KHÓA ĐÀO TẠO <br>TRƯỜNG CAO ĐẲNG BÁCH KHOA</h2> </div>
 </header>
 <div class="container"> 
 	<div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
@@ -39,6 +39,31 @@
     		<span class="carousel-control-next-icon" aria-hidden="true"></span>
     		<span class="visually-hidden">Next</span>
   		</button>
+	</div>
+
+	<div class="container">
+		<div>
+			<h1 class="text-center text-primary">
+				Thông Tin Ưu Đãi Học Phí
+			</h1>
+		</div> 
+		<div>
+			<p class="text-danger fw-bold fs-3">Chương Trình Thiết Kế Web -App Mobie </p>
+			<ul>
+				<li>Kỹ thuật viên đang có học phí ưu đãi từ 5.500.000đ</li>
+				<li><span class="text-primary fw-bold">Đặc Biệt:</span> ưu đãi 30% cho chu class="text-danger fw-bold"yên viên đồ họa đăng kí học cùng khóa</li>
+				<li><span class="text-danger fw-bold">BẢO HÀNH KIẾN THỨC SAU TỐT NGHIỆP:</span><span>Hỗ trợ 70% học phí</span> khi Học Viên đăng kí học cập nhật kiến thức</li>
+				<li>Tặng <span class="text-decoration-underline fw-bold">10%</span> học phí cho học viên cũ / sinh viên có các giờ học từ 8h00 hoặc 13h30</li>
+				<li>Tặng <span class="text-decoration-underline fw-bold">100.000Đ</span> khi học viên mới đăng kí các lớp có giờ học từ 18h00</li>
+			</ul>
+		</div>
+		<div>
+			<p class="text-danger fw-bold fs-3">ƯU ĐÃI CÁC LỚP COMBO (3 THÁNG) & CHUYÊN ĐỀ NGẮN HẠN(1,5 THÁNG)</p>
+			<ul>
+				<li><span>ƯU ĐÃI NHÓM:</span><span> 10% </span>hộc phí cho nhóm 2 học viên, <span>15%</span> học phí cho nhóm 3 học viên trở lên</li>
+				<li><span>Hỗ trợ 40% học phí</span> các lớp chuyên đề ĐỒ HỌA ngoài chương trình học</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class= "container-fluid">
@@ -97,8 +122,8 @@
                   <p>CÓ VIỆC LÀM SAU KHI HOÀN THÀNH CÁC KHÓA HỌC</p>
                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
  	<h1 class="text-center"> </h1> 
  	<div class="row d-flex justify-content-center bg-secondary"> 
@@ -124,7 +149,7 @@
     				<input name="sex" id="inlineCheckbox2" value="female" type="radio">Nữ 
     			</label><br>
     			<label class="text-light"> Ngày Bắt đầu học</label> 
-    			<input class="form-control" name="date_begin" placeholder="date" type="date"> 
+    			<input class="form-control" name="dateBegin" placeholder="date" type="date"> 
     			<label class="text-light"> Thời Gian Kết thúc Khóa Học</label> 
     			<div class="row">  
     				<div class="col-xs-6 col-md-6"> 

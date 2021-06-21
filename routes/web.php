@@ -35,3 +35,8 @@ Route::post('upload',[UploadController::class,'index']);
 Route::get('dangky',function(){
     return view('Registration');
 });
+
+Route::get('select',function(){
+    return view('select');
+});
+
