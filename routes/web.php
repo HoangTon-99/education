@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use app\http\controllers\FileUploadController;
 use App\Http\Controllers\UploadController;
-
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +36,6 @@ Route::get('dangky',function(){
     return view('Registration');
 });
 
-Route::get('select',function(){
-    return view('select');
-});
 
+Route::get('Registration',[AdminController::class,'create']);
+Route::post('Registration',[AdminController::class,'store']);

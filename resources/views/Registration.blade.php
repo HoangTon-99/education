@@ -134,26 +134,26 @@
    			<form action="" method="post" class="form" role="form"> 
     			<div class="row"> 
      				<div class="col-xs-6 col-md-6"> 
-     					<input class="form-control" name="firstname" placeholder="Họ" required="" autofocus="" type="text">
+     					<input class="form-control" name="FirstName" placeholder="Họ" required="" autofocus="" type="text">
      				</div> 
      				<div class="col-xs-6 col-md-6"> 
-     					<input class="form-control" name="lastname" placeholder="Tên" required="" type="text"> 
+     					<input class="form-control" name="LastName" placeholder="Tên" required="" type="text"> 
      				</div> 
     			</div> 
-    			<input class="form-control" name="youremail" placeholder="Email" type="email" required=""> 
-    			<input class="form-control" name="address" placeholder="Address" type="text" required=""> 
+    			<input class="form-control" name="Email" placeholder="Email" type="email" required="" > 
+    			<input class="form-control" name="Address" placeholder="Address" type="text" required="" pattern="[\s*A-Za-z]{1,50}"> 
     			<label class="radio-inline text-light">          
-    				<input name="sex" id="inlineCheckbox1" value="male" type="radio">Nam 
+    				<input name="Sex" id="inlineCheckbox1" value="male" type="radio">Nam 
     			</label> 
     			<label class="radio-inline text-light">          
-    				<input name="sex" id="inlineCheckbox2" value="female" type="radio">Nữ 
+    				<input name="Sex" id="inlineCheckbox2" value="female" type="radio">Nữ 
     			</label><br>
     			<label class="text-light"> Ngày Bắt đầu học</label> 
     			<input class="form-control" name="dateBegin" placeholder="date" type="date"> 
     			<label class="text-light"> Thời Gian Kết thúc Khóa Học</label> 
     			<div class="row">  
     				<div class="col-xs-6 col-md-6"> 
-    					<select class="form-control">              
+    					<select class="form-control" class="Month">              
     						<option value="Month">1 Tháng</option>
     						<option value="Month">2 Tháng</option>
     						<option value="Month">3 Tháng</option>
@@ -166,7 +166,7 @@
     			<label class="text-light"> Chọn Khóa Học Mà Bạn Muốn Đăng Kí</label> 
     			<div class="row">
     				<div class="col-xs-12 col-md-12"> 
-    					<select class="form-control">              
+    					<select class="form-control" class="Course">              
     						<option value="Course">HTML CSS</option> 
     						<option value="Course">XÂY DỰNG KHUNG FRAMESETS</option>
     						<option value="Course">BOOTSRAP</option>
