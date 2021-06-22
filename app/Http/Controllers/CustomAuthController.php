@@ -13,20 +13,20 @@ class CustomAuthController extends Controller
 
     public function index()
     {
-        return view('auth.login');
+        return view('hoangton.login');
     }
 
 
     public function customLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'required|email',
+            'password' =>'required|min:5|max:30',
         ]);
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
+            return redirect("")->intended('index')
                         ->withSuccess('Signed in');
         }
 
@@ -35,9 +35,64 @@ class CustomAuthController extends Controller
 
 
 
+    // public function registration()
+    // {
+    //     return view('hoangton.register');
+    // }
+
+
+    // public function customRegistration(Request $request)
+    // {
+    //     $request->validate([
+    //         'name' =>'required|min:6|max:30|alpha',
+    //         'email' => 'required|email|unique:users',
+    //         'password' => 'required|min:6|max:30|confirmed',
+
+
+    //         'phone' =>'required|min:10|numeric',
+    //         'address' =>'required|min:5|max:50',
+
+    //     ]);
+
+    //     $data = $request->all();
+    //     $check = $this->create($data);
+
+    //     return redirect("layouts.master")->withSuccess('You have signed-in');
+    // }
+
+
+    // public function create(array $data)
+    // {
+    //   return User::create([
+    //     'name' => $data['name'],
+    //     'email' => $data['email'],
+    //     'password' => Hash::make($data['password']),
+
+    //     'phone' => $data['phone'],
+    //     'address' => $data['address'],
+    //   ]);
+    // }
+
+
+    // public function dashboard()
+    // {
+    //     if(Auth::check()){
+    //         return view('layouts.master');
+    //     }
+
+    //     return redirect("login")->withSuccess('You are not allowed to access');
+    // }
+
+
+    // public function signOut() {
+    //     Session::flush();
+    //     Auth::logout();
+
+    //     return Redirect('login');
+    // }
     public function registration()
     {
-        return view('auth.register');
+        return view('hoangton.register');
     }
 
 
@@ -69,7 +124,7 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            return view('dashboard');
+            return view('index');
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
