@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use app\http\controllers\FileUploadController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -32,10 +33,17 @@ Route::get('upload',function(){
 Route::post('upload',[UploadController::class,'index']);
 
 /*đăng kí khóa học*/
-Route::get('dangky',function(){
+/*Route::get('dangky',function(){
     return view('Registration');
-});
+});*/
 
 
-Route::get('Registration',[AdminController::class,'create']);
-Route::post('Registration',[AdminController::class,'store']);
+/*Route::get('Registration',[AdminController::class,'create']);
+Route::post('Registration',[AdminController::class,'store']);*/
+
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
