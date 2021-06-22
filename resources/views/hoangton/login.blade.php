@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,29 +17,22 @@
         <div class="row">
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">Login </h2>
-                @if($errors->any())
-                    <div class="alert alert-danger">
-                        @foreach($errors->all() as $err)
-                            <li>{{ $err }}</li>
-                        @endforeach
-                    </div>
-                @endif
 
-                @if(session('thongbao'))
-                    <div class="alert alert-primary">
-                        {{ session('thongbao') }}
-                    </div>
-                @endif
-                <form class="login-form" action="login" method="POST">
-                    @csrf()
+        <form class="login-form" action="{{ route('login.custom') }}" method="POST">
+                    @csrf
       <div class="form-group">
         <label for="exampleInputEmail1" class="text-uppercase">Email</label>
-        <input type="text" class="form-control" placeholder="Email" name="email">
-
+        <input type="text" class="form-control" placeholder="Email" name="email" required autofocus>
+        @if ($errors->has('email'))
+        <span class="text-danger">{{ $errors->first('email') }}</span>
+        @endif
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-        <input type="password" class="form-control" placeholder="Password" name="password">
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
+        @if ($errors->has('password'))
+            <span class="text-danger">{{ $errors->first('password') }}</span>
+        @endif
       </div>
 
 
@@ -66,25 +59,25 @@
           <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
             <div class="banner-text">
-                <h2>This is Heaven</h2>
+                <h2 class="">Bạn muốn trở thành lập trình viên ?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
             </div>
       </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item ">
           <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
             <div class="banner-text">
-                <h2>This is Heaven</h2>
+                <h2>Bạn muốn trở thành lập trình viên ?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
             </div>
         </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item ">
           <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide">
           <div class="carousel-caption d-none d-md-block">
             <div class="banner-text">
-                <h2>This is Heaven</h2>
+                <h2>Bạn muốn trở thành lập trình viên ?</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
             </div>
         </div>

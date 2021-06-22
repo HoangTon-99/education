@@ -17,10 +17,15 @@ use App\Http\Controllers\CustomAuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-   return view('hoangton.index');
+Route::get('/',function(){
+    return view('index');
 });
+// Route::get('/', function () {
+//    return view('hoangton.index');
+// });
+Route::get('getregister', function () {
+    return view('hoangton.register');
+ });
 
 // Route::get('register', function () {
 //    return view('hoangton.register');

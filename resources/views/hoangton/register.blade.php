@@ -20,8 +20,8 @@
                 <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
                 <h3>Welcome</h3>
                 <p>Chào mừng bạn đến với Education.dev</p>
-                <form action="login">
-                <input type="submit" name="" value="Đăng nhập" /><br />
+                <form action="{{ route('login.custom') }}" method="POST">
+                <input type="submit" name="" value="Login" /><br />
             </form>
             </div>
             <div class="col-md-9 register-right">
@@ -36,82 +36,43 @@
                     </li>
                 </ul>
 
-                    <div class="tab-content" id="myTabContent">
+                <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <h3 class="register-heading">Đăng Kí Thành viên</h3>
 
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    @foreach ($errors->all() as $err)
-                                    <li>{{ $err }}</li>
-                                    @endforeach
-                                </div>
-                            @endif
-                            @if(session('thongbao'))
-                                <div class="alert alert-success">
-                                    {{ session('thongbao') }}
-                                </div>
-                            @endif
-                            <form action="register" method="post">
-                                @csrf()
+                            <form action="{{ route('register.custom') }}" method="post">
+                                @csrf
                                 <div class="row register-form">
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder=" Name *" value="" name="name" />
-
-                                                {{-- @if ($errors->has('name'))
-                                                <span class="alert alert-danger">
-                                                {{ $errors->first('name') }}
-                                                </span>
-                                                @endif --}}
+                                            @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                            @endif
                                         </div>
-
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" name="password" />
-
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirm Password *"value="" name="confirmpass" />
-
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="maxl">
-                                                <label class="radio inline">
-                                                    <input type="radio" name="gender" value="male" checked name="sex">
-                                                    <span> Male </span>
-                                                </label>
-                                                <label class="radio inline">
-                                                    <input type="radio" name="gender" value="female" name="sex">
-                                                    <span>Female </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="email" class="form-control" placeholder="Your Email *" value="" name="email" />
-
+                                            @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                            @endif
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" minlength="10" maxlength="10"
-                                                class="form-control" placeholder="Your Phone *" value="" name="phone" />
-
+                                            <input type="password" class="form-control" placeholder="Password *" value="" name="password" />
+                                            @if ($errors->has('password'))
+                                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                                            @endif
                                         </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Address *" value="" name="address" />
-
-
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Đăng ký</button>
                                     </div>
+
 
                                 </div>
                             </form>
 
                         </div>
-                        <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        {{-- <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <h3 class="register-heading">Đăng kí thành viên</h3>
 
                             <form action="register" method="post">
@@ -148,7 +109,7 @@
 
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="`Address *" value="" name="address" />
-                                            
+
                                         </div>
                                         <button type="submit" class="btn btn-primary">Đăng ký</button>
 
@@ -157,9 +118,9 @@
                                 </div>
                             </form>
 
-                        </div>
-                    </div>
-                </form>
+                         </div> --}}
+                </div>
+
             </div>
         </div>
 

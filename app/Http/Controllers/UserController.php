@@ -20,8 +20,8 @@ class UserController extends Controller
                 'email' =>'required|email',
                 'address' =>'required|min:5|max:300|',
                 'phone' =>'required|min:10|numeric',
-                'password' =>'required|confirmed|min:5|max:30',
-                'confirmpass'=>'required|confirmed|min:5|max:30'
+                'password' =>'required|min:5|max:30',
+
             ]);
             if($validator->fails()){
                 return redirect()->back()
