@@ -7,8 +7,8 @@
 </head>
 <body>
 <header>
-	<div class="w-50"><img src="{{URL::asset('/img/brand.png')}}" class="w-75 h-75 float-start"></div>
-	<div class="col-12 col-sm-6  float-start mt text-secondary"><h2 class="text-center w-100 h-25 ">CHÀO MỪNG ĐẾN VỚI KHÓA ĐÀO TẠO <br>TRƯỜNG CAO ĐẲNG BÁCH KHOA</h2> </div>
+	<div class="w-50 ml"><img src="{{URL::asset('/img/brand1.png')}}" class="w-75 h-75 float-start"></div>
+	
 </header>
 <div class="container"> 
 	<div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
@@ -19,7 +19,7 @@
   		</div>
   		<div class="carousel-inner">
     		<div class="carousel-item active" data-bs-interval="10000">
-      			<img src="{{URL::asset('/img/javaweb.png')}}" class="d-block w-100 h-100" alt="...">
+      			<img src="{{URL::asset('/img/ED1.png')}}" class="d-block w-100 h-100" alt="...">
    			</div>
     		<div class="carousel-item" data-bs-interval="2000">
       			<img src="{{URL::asset('/img/sale.png')}}" class="d-block w-100 h-100" alt="...">
@@ -41,24 +41,25 @@
 	<div class="container">
 		<div>
 			<h1 class="text-center text-primary">
-				Thông Tin Ưu Đãi Học Phí
+				VÌ SAO NÊN CHỌN EDUCATION.DEV
 			</h1>
 		</div> 
 		<div>
-			<p class="text-danger fw-bold fs-3">Chương Trình Thiết Kế Web -App Mobie </p>
+			<p class="text-danger fw-bold fs-3">Học đúng nhu cầu </p>
 			<ul>
-				<li>Kỹ thuật viên đang có học phí ưu đãi từ 5.500.000đ</li>
-				<li><span class="text-primary fw-bold">Đặc Biệt:</span> ưu đãi 30% cho chu class="text-danger fw-bold"yên viên đồ họa đăng kí học cùng khóa</li>
-				<li><span class="text-danger fw-bold">BẢO HÀNH KIẾN THỨC SAU TỐT NGHIỆP:</span><span>Hỗ trợ 70% học phí</span> khi Học Viên đăng kí học cập nhật kiến thức</li>
-				<li>Tặng <span class="text-decoration-underline fw-bold">10%</span> học phí cho học viên cũ / sinh viên có các giờ học từ 8h00 hoặc 13h30</li>
-				<li>Tặng <span class="text-decoration-underline fw-bold">100.000Đ</span> khi học viên mới đăng kí các lớp có giờ học từ 18h00</li>
+				<li>Ở FUNiX bạn được toàn quyền chủ động lựa chọn học những kiến thức bạn cần theo các nhóm Chứng chỉ được thiết kế bởi những chuyên gia CNTT có uy tín trong ngành.</li>
+				<li><span class="text-primary fw-bold">Đặc Biệt:</span> Nguồn học liệu từ các trường ĐH hàng đầu thế giới,được chọn lọc, dễ dàng áp dụng vào công việc thực tế. Học liệu được kiểm nghiệm, Việt hóa từ các chuyên viên, lập trình viên giàu kinh nghiệm thực tế và nhà tuyển dụng.</li>
+				<li>dàng tương tác 1:1 với các chuyên gia và thảo luận với hơn 10.000 thành viên trong cộng đồng FUNiX giúp bạn học nhanh chóng hơn, giải quyết vấn đề nhanh hơn từ các bài toán thực tế họ đang mắc phải trong quá trình làm việc</li>
+				<li> Hệ thống bài học ngắn gọn (~10-15’/bài giảng) bằng hình thức đa dạng, bạn dễ dàng sắp xếp thời gian học mà không ảnh hưởng đến công việc hiện tại và thời gian dành cho gia đình.</li>
+            <li><span class="text-danger fw-bold">BẢO HÀNH KIẾN THỨC SAU TỐT NGHIỆP: khi Học Viên đăng kí học cập nhật kiến thức</li>
+				
 			</ul>
 		</div>
 		<div>
-			<p class="text-danger fw-bold fs-3">ƯU ĐÃI CÁC LỚP COMBO (3 THÁNG) & CHUYÊN ĐỀ NGẮN HẠN(1,5 THÁNG)</p>
+			<p class="text-danger fw-bold fs-3">Chương trình học linh hoạt với mọi mục tiêu và Đi làm ngay khi hoàn thành 3 kỳ học</p>
 			<ul>
-				<li><span>ƯU ĐÃI NHÓM:</span><span> 10% </span>hộc phí cho nhóm 2 học viên, <span>15%</span> học phí cho nhóm 3 học viên trở lên</li>
-				<li><span>Hỗ trợ 40% học phí</span> các lớp chuyên đề ĐỒ HỌA ngoài chương trình học</li>
+				<li>Sau khi học 3 Học kỳ (Khoảng 1 năm rưỡi), học viên sẽ được giới thiệu làm Lập trình viên tại hàng trăm doanh nghiệp có Ký kết Hợp tác Chiến lược về Đào tạo và Tuyển dụng ngành CNTT với FUNiX, như: FPT Software, Rikkeisoft, VTI, 1Office, Tinh Vân…</li>
+				<li>Mỗi học kỳ 4-6 tháng, được thiết kế cho các học viên theo mục tiêu: Học lấy Bằng, Học nâng cao trình độ, Học kỹ năng CNTT, Học để đi làm, Học để biết</li>
 			</ul>
 		</div>
 	</div>

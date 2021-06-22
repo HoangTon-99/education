@@ -8,12 +8,15 @@ body {
 	background-color: #EFEFEF;
 }
 .carousel-item{
-	height: 500px;
+	height: 700px;
 }
 .GalleryItem{
 	height: 250px;
 	width: 350px;
 }
 .mt{
-	margin-top: 20px;
+	margin-top: 50px;
+}
+.ml{
+	margin-left: 70px;
 }
